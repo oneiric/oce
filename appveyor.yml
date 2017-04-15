@@ -1,7 +1,7 @@
-version: oce-0.18.{build}
+version: oce-0.18.1.{build}
 
 environment:
-  oce_version: 0.18
+  oce_version: 0.18.1
   matrix:
     - generator: "MSYS Makefiles"
       ARCH: "i686"
@@ -21,6 +21,12 @@ environment:
     - generator: "Visual Studio 14 Win64"
       ARCH: "Win64"
       Compiler: "MSVC2015"
+    - generator: "Visual Studio 15"
+      ARCH: "Win32"
+      Compiler: "MSVC2017"
+    - generator: "Visual Studio 15 Win64"
+      ARCH: "Win64"
+      Compiler: "MSVC2017"
 
 cache:
   - i686-4.9.3-release-posix-dwarf-rt_v4-rev1.7z
